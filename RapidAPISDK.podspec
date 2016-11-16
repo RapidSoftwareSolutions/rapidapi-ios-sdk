@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
   s.license      = "Apache License, Version 2.0"
 
   s.author       = { "bukati" => "andrey@rapidapi.com" }
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "9.0"
 
   s.source       = { :git => "https://github.com/RapidSoftwareSolutions/rapidapi-ios-sdk.git", :tag => s.version, :submodules => true }
 
   s.source_files  = "RapidConnectSDK/*.{h,m}"
-  s.public_header_files = "RapidConnectSDK/RapidConnect.h", "RapidConnectSDK/RapidConnectSDK.h"
+  s.public_header_files = "RapidConnectSDK/RapidConnectSDK.h"
 
   s.requires_arc = true
   s.documentation_url  = "https://github.com/RapidSoftwareSolutions/rapidapi-ios-sdk/blob/master/README.md"
