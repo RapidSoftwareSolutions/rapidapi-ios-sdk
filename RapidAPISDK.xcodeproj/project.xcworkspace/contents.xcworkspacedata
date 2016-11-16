@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RapidConnectSDK.xcodeproj">
+      location = "self:/Users/bukati/IdeaProjects/RapidConnectSDK/RapidAPISDK.xcodeproj">
    </FileRef>
 </Workspace>

@@ -16,6 +16,6 @@ FOUNDATION_EXPORT const unsigned char RapidConnectSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RapidConnectSDK/PublicHeader.h>
 
-#import <RapidConnectSDK/RapidConnect.h>
+#import <RapidAPISDK/RapidAPI.h>
 
 

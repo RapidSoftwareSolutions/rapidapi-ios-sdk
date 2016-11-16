@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A2B856D1DC0CB9B005FC373 /* RapidConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2B856B1DC0CB9B005FC373 /* RapidConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A2B856E1DC0CB9B005FC373 /* RapidConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B856C1DC0CB9B005FC373 /* RapidConnect.m */; };
-		8A56E6831DB8B5DB00F37948 /* RapidConnectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56E6791DB8B5DB00F37948 /* RapidConnectSDK.framework */; };
+		8A2B856D1DC0CB9B005FC373 /* RapidAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2B856B1DC0CB9B005FC373 /* RapidAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A2B856E1DC0CB9B005FC373 /* RapidAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B856C1DC0CB9B005FC373 /* RapidAPI.m */; };
+		8A56E6831DB8B5DB00F37948 /* RapidAPISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */; };
 		8A56E6881DB8B5DB00F37948 /* RapidConnectSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A56E6871DB8B5DB00F37948 /* RapidConnectSDKTests.m */; };
-		8A56E68A1DB8B5DB00F37948 /* RapidConnectSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A56E67C1DB8B5DB00F37948 /* RapidConnectSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A56E68A1DB8B5DB00F37948 /* RapidAPISDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A56E67C1DB8B5DB00F37948 /* RapidAPISDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A2B856B1DC0CB9B005FC373 /* RapidConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RapidConnect.h; sourceTree = "<group>"; };
-		8A2B856C1DC0CB9B005FC373 /* RapidConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RapidConnect.m; sourceTree = "<group>"; };
-		8A56E6791DB8B5DB00F37948 /* RapidConnectSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RapidConnectSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A56E67C1DB8B5DB00F37948 /* RapidConnectSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RapidConnectSDK.h; sourceTree = "<group>"; };
+		8A2B856B1DC0CB9B005FC373 /* RapidAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RapidAPI.h; sourceTree = "<group>"; };
+		8A2B856C1DC0CB9B005FC373 /* RapidAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RapidAPI.m; sourceTree = "<group>"; };
+		8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RapidAPISDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A56E67C1DB8B5DB00F37948 /* RapidAPISDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RapidAPISDK.h; sourceTree = "<group>"; };
 		8A56E67D1DB8B5DB00F37948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A56E6821DB8B5DB00F37948 /* RapidConnectSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidConnectSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A56E6821DB8B5DB00F37948 /* RapidAPISDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidAPISDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A56E6871DB8B5DB00F37948 /* RapidConnectSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RapidConnectSDKTests.m; sourceTree = "<group>"; };
 		8A56E6891DB8B5DB00F37948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A56E6831DB8B5DB00F37948 /* RapidConnectSDK.framework in Frameworks */,
+				8A56E6831DB8B5DB00F37948 /* RapidAPISDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +57,7 @@
 		8A56E66F1DB8B5DB00F37948 = {
 			isa = PBXGroup;
 			children = (
-				8A56E67B1DB8B5DB00F37948 /* RapidConnectSDK */,
+				8A56E67B1DB8B5DB00F37948 /* RapidAPISDK */,
 				8A56E6861DB8B5DB00F37948 /* RapidConnectSDKTests */,
 				8A56E67A1DB8B5DB00F37948 /* Products */,
 			);
@@ -66,20 +66,21 @@
 		8A56E67A1DB8B5DB00F37948 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A56E6791DB8B5DB00F37948 /* RapidConnectSDK.framework */,
-				8A56E6821DB8B5DB00F37948 /* RapidConnectSDKTests.xctest */,
+				8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */,
+				8A56E6821DB8B5DB00F37948 /* RapidAPISDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A56E67B1DB8B5DB00F37948 /* RapidConnectSDK */ = {
+		8A56E67B1DB8B5DB00F37948 /* RapidAPISDK */ = {
 			isa = PBXGroup;
 			children = (
-				8A2B856B1DC0CB9B005FC373 /* RapidConnect.h */,
-				8A2B856C1DC0CB9B005FC373 /* RapidConnect.m */,
-				8A56E67C1DB8B5DB00F37948 /* RapidConnectSDK.h */,
+				8A2B856B1DC0CB9B005FC373 /* RapidAPI.h */,
+				8A2B856C1DC0CB9B005FC373 /* RapidAPI.m */,
+				8A56E67C1DB8B5DB00F37948 /* RapidAPISDK.h */,
 				8A56E67D1DB8B5DB00F37948 /* Info.plist */,
 			);
+			name = RapidAPISDK;
 			path = RapidConnectSDK;
 			sourceTree = "<group>";
 		};
@@ -99,17 +100,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A2B856D1DC0CB9B005FC373 /* RapidConnect.h in Headers */,
-				8A56E68A1DB8B5DB00F37948 /* RapidConnectSDK.h in Headers */,
+				8A2B856D1DC0CB9B005FC373 /* RapidAPI.h in Headers */,
+				8A56E68A1DB8B5DB00F37948 /* RapidAPISDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8A56E6781DB8B5DB00F37948 /* RapidConnectSDK */ = {
+		8A56E6781DB8B5DB00F37948 /* RapidAPISDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A56E68D1DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidConnectSDK" */;
+			buildConfigurationList = 8A56E68D1DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidAPISDK" */;
 			buildPhases = (
 				8A56E6741DB8B5DB00F37948 /* Sources */,
 				8A56E6751DB8B5DB00F37948 /* Frameworks */,
@@ -120,14 +121,14 @@
 			);
 			dependencies = (
 			);
-			name = RapidConnectSDK;
+			name = RapidAPISDK;
 			productName = RapidConnectSDK;
-			productReference = 8A56E6791DB8B5DB00F37948 /* RapidConnectSDK.framework */;
+			productReference = 8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8A56E6811DB8B5DB00F37948 /* RapidConnectSDKTests */ = {
+		8A56E6811DB8B5DB00F37948 /* RapidAPISDKTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A56E6901DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidConnectSDKTests" */;
+			buildConfigurationList = 8A56E6901DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidAPISDKTests" */;
 			buildPhases = (
 				8A56E67E1DB8B5DB00F37948 /* Sources */,
 				8A56E67F1DB8B5DB00F37948 /* Frameworks */,
@@ -138,9 +139,9 @@
 			dependencies = (
 				8A56E6851DB8B5DB00F37948 /* PBXTargetDependency */,
 			);
-			name = RapidConnectSDKTests;
+			name = RapidAPISDKTests;
 			productName = RapidConnectSDKTests;
-			productReference = 8A56E6821DB8B5DB00F37948 /* RapidConnectSDKTests.xctest */;
+			productReference = 8A56E6821DB8B5DB00F37948 /* RapidAPISDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A56E6731DB8B5DB00F37948 /* Build configuration list for PBXProject "RapidConnectSDK" */;
+			buildConfigurationList = 8A56E6731DB8B5DB00F37948 /* Build configuration list for PBXProject "RapidAPISDK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -176,8 +177,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A56E6781DB8B5DB00F37948 /* RapidConnectSDK */,
-				8A56E6811DB8B5DB00F37948 /* RapidConnectSDKTests */,
+				8A56E6781DB8B5DB00F37948 /* RapidAPISDK */,
+				8A56E6811DB8B5DB00F37948 /* RapidAPISDKTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A2B856E1DC0CB9B005FC373 /* RapidConnect.m in Sources */,
+				8A2B856E1DC0CB9B005FC373 /* RapidAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +222,7 @@
 /* Begin PBXTargetDependency section */
 		8A56E6851DB8B5DB00F37948 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A56E6781DB8B5DB00F37948 /* RapidConnectSDK */;
+			target = 8A56E6781DB8B5DB00F37948 /* RapidAPISDK */;
 			targetProxy = 8A56E6841DB8B5DB00F37948 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -386,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A56E6731DB8B5DB00F37948 /* Build configuration list for PBXProject "RapidConnectSDK" */ = {
+		8A56E6731DB8B5DB00F37948 /* Build configuration list for PBXProject "RapidAPISDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A56E68B1DB8B5DB00F37948 /* Debug */,
@@ -395,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A56E68D1DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidConnectSDK" */ = {
+		8A56E68D1DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidAPISDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A56E68E1DB8B5DB00F37948 /* Debug */,
@@ -404,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A56E6901DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidConnectSDKTests" */ = {
+		8A56E6901DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidAPISDKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A56E6911DB8B5DB00F37948 /* Debug */,

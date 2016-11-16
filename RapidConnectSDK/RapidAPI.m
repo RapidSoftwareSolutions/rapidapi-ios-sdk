@@ -6,7 +6,7 @@
 //  Copyright © 2016 RapidAPI. All rights reserved.
 //
 
-#import "RapidConnect.h"
+#import "RapidAPI.h"
 
 @implementation RapidConnect
 
