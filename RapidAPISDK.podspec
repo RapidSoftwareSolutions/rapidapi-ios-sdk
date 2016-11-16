@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/RapidSoftwareSolutions/rapidapi-ios-sdk.git", :tag => s.version, :submodules => true }
 
-  s.source_files  = "RapidAPISDK/**/*.{h,m}"
+  s.source_files  = "RapidConnectSDK/**/*.{h,m}"
 
   s.requires_arc = true
   s.documentation_url  = "https://github.com/RapidSoftwareSolutions/rapidapi-ios-sdk/blob/master/README.md"

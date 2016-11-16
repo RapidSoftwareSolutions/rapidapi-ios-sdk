@@ -10,7 +10,7 @@
 		8A2B856D1DC0CB9B005FC373 /* RapidAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2B856B1DC0CB9B005FC373 /* RapidAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A2B856E1DC0CB9B005FC373 /* RapidAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B856C1DC0CB9B005FC373 /* RapidAPI.m */; };
 		8A56E6831DB8B5DB00F37948 /* RapidAPISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */; };
-		8A56E6881DB8B5DB00F37948 /* RapidConnectSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A56E6871DB8B5DB00F37948 /* RapidConnectSDKTests.m */; };
+		8A56E6881DB8B5DB00F37948 /* RapidAPISDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A56E6871DB8B5DB00F37948 /* RapidAPISDKTests.m */; };
 		8A56E68A1DB8B5DB00F37948 /* RapidAPISDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A56E67C1DB8B5DB00F37948 /* RapidAPISDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -20,7 +20,7 @@
 			containerPortal = 8A56E6701DB8B5DB00F37948 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8A56E6781DB8B5DB00F37948;
-			remoteInfo = RapidConnectSDK;
+			remoteInfo = RapidAPISDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -31,7 +31,7 @@
 		8A56E67C1DB8B5DB00F37948 /* RapidAPISDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RapidAPISDK.h; sourceTree = "<group>"; };
 		8A56E67D1DB8B5DB00F37948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A56E6821DB8B5DB00F37948 /* RapidAPISDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidAPISDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A56E6871DB8B5DB00F37948 /* RapidConnectSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RapidConnectSDKTests.m; sourceTree = "<group>"; };
+		8A56E6871DB8B5DB00F37948 /* RapidAPISDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RapidAPISDKTests.m; sourceTree = "<group>"; };
 		8A56E6891DB8B5DB00F37948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				8A56E67B1DB8B5DB00F37948 /* RapidAPISDK */,
-				8A56E6861DB8B5DB00F37948 /* RapidConnectSDKTests */,
+				8A56E6861DB8B5DB00F37948 /* RapidAPISDKTests */,
 				8A56E67A1DB8B5DB00F37948 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,16 +81,16 @@
 				8A56E67D1DB8B5DB00F37948 /* Info.plist */,
 			);
 			name = RapidAPISDK;
-			path = RapidConnectSDK;
+			path = RapidAPISDK;
 			sourceTree = "<group>";
 		};
-		8A56E6861DB8B5DB00F37948 /* RapidConnectSDKTests */ = {
+		8A56E6861DB8B5DB00F37948 /* RapidAPISDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A56E6871DB8B5DB00F37948 /* RapidConnectSDKTests.m */,
+				8A56E6871DB8B5DB00F37948 /* RapidAPISDKTests.m */,
 				8A56E6891DB8B5DB00F37948 /* Info.plist */,
 			);
-			path = RapidConnectSDKTests;
+			path = RapidAPISDKTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +122,7 @@
 			dependencies = (
 			);
 			name = RapidAPISDK;
-			productName = RapidConnectSDK;
+			productName = RapidAPISDK;
 			productReference = 8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -140,7 +140,7 @@
 				8A56E6851DB8B5DB00F37948 /* PBXTargetDependency */,
 			);
 			name = RapidAPISDKTests;
-			productName = RapidConnectSDKTests;
+			productName = RapidAPISDKTests;
 			productReference = 8A56E6821DB8B5DB00F37948 /* RapidAPISDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -213,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A56E6881DB8B5DB00F37948 /* RapidConnectSDKTests.m in Sources */,
+				8A56E6881DB8B5DB00F37948 /* RapidAPISDKTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,10 +335,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RapidConnectSDK/Info.plist;
+				INFOPLIST_FILE = RapidAPISDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidConnectSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidAPISDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -353,10 +353,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RapidConnectSDK/Info.plist;
+				INFOPLIST_FILE = RapidAPISDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidConnectSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidAPISDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -366,9 +366,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7ERYUS4J4W;
-				INFOPLIST_FILE = RapidConnectSDKTests/Info.plist;
+				INFOPLIST_FILE = RapidAPISDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidConnectSDKTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidAPISDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -377,9 +377,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7ERYUS4J4W;
-				INFOPLIST_FILE = RapidConnectSDKTests/Info.plist;
+				INFOPLIST_FILE = RapidAPISDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidConnectSDKTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapidapi.RapidAPISDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
