@@ -1,0 +1,6 @@
+framework module RapidAPISDK {
+  umbrella header "RapidAPISDK.h"
+
+  export *
+  module * { export * }
+}
