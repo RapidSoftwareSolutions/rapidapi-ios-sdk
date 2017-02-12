@@ -7,6 +7,7 @@
 //
 
 #import "RapidAPI.h"
+#import <PhoenixClient/PhoenixClient.h>
 
 @implementation RapidConnect
 
@@ -20,6 +21,8 @@
         
         _baseUrl = @"https://rapidapi.io/connect";
         _auth = authValue;
+        _projectName = projectName;
+        _token = token;
     }
     return self;
 }
@@ -32,6 +35,61 @@
 - (NSString*)buildCallUrlWithPackage:(NSString*)package block:(NSString*)block
 {
     return [NSString stringWithFormat:@"%@/%@/%@", [self getBaseUrl], package, block];
+}
+
+- (NSString*)buildGetTokenURL:(NSString*)package event:(NSString*)event
+{
+    return [NSString stringWithFormat:@"http://webhooks.imrapid.io/api/get_token?user_id=%@", [self buildUserID:package event:event]];
+}
+
+- (NSString*)buildSocketURL:(NSString*)token
+{
+    return [NSString stringWithFormat:@"ws://webhooks.imrapid.io/socket/websocket?token=%@", token];
+}
+
+- (NSString*)buildSocketTopic:(NSString*)package event:(NSString*)event
+{
+    return [NSString stringWithFormat:@"users_socket:%@", [self buildUserID:package event:event]];
+}
+
+- (NSString*)buildUserID:(NSString*)package event:(NSString*)event
+{
+    return [NSString stringWithFormat:@"%@.%@_%@:%@", package, event, self.projectName, self.token];
+}
+
+- (void)listen:(NSString*)package
+         event:(NSString*)event
+    withParameters:(NSDictionary*)parameters
+     onMessage:(void (^)(NSDictionary *message))onMessage
+     onError:(void (^)(NSDictionary *reason))onError
+        onJoin:(void (^)())onJoin
+        onClose:(void (^)(NSDictionary *reason))onClose
+{
+    NSURL *token_url = [NSURL URLWithString:[self buildGetTokenURL:package event:event]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:token_url];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        NSString *token = json[@"token"];
+        PhxSocket *socket = [[PhxSocket alloc] initWithURL:[NSURL URLWithString:[self buildSocketURL:token]] heartbeatInterval:20];
+        NSString *topic = [self buildSocketTopic:package event:event];
+        [socket connect];
+        PhxChannel *channel = [[PhxChannel alloc] initWithSocket:socket topic:topic params:parameters];
+        id join = [channel join];
+        [join onReceive:@"ok" callback:^(id message) {
+            onJoin();
+        }];
+        [join onReceive:@"error" callback:^(NSDictionary *reason) {
+            onError(reason);
+        }];
+        [channel onEvent:@"new_msg" callback:^(NSDictionary *message, id ref) {
+            onMessage(message[@"body"]);
+        }];
+        [channel onClose:^(NSDictionary *reason) {
+            onClose(reason);
+        }];
+    }] resume];
 }
 
 - (void)callPackage:(NSString*)package

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D412541335DE6C509CDE81D /* libPods-RapidAPISDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 004B33D8732491ED7A6EC8BB /* libPods-RapidAPISDK.a */; };
 		8A2B856D1DC0CB9B005FC373 /* RapidAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2B856B1DC0CB9B005FC373 /* RapidAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A2B856E1DC0CB9B005FC373 /* RapidAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B856C1DC0CB9B005FC373 /* RapidAPI.m */; };
 		8A56E6831DB8B5DB00F37948 /* RapidAPISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */; };
 		8A56E6881DB8B5DB00F37948 /* RapidAPISDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A56E6871DB8B5DB00F37948 /* RapidAPISDKTests.m */; };
 		8A56E68A1DB8B5DB00F37948 /* RapidAPISDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A56E67C1DB8B5DB00F37948 /* RapidAPISDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB746A147A202B7AA5EC062B /* libPods-RapidAPISDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 230F92A16945331C66AE1376 /* libPods-RapidAPISDKTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		004B33D8732491ED7A6EC8BB /* libPods-RapidAPISDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RapidAPISDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFCDE086AF3607CD9B80E31 /* Pods-RapidAPISDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAPISDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidAPISDKTests/Pods-RapidAPISDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		230F92A16945331C66AE1376 /* libPods-RapidAPISDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RapidAPISDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A2B856B1DC0CB9B005FC373 /* RapidAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RapidAPI.h; sourceTree = "<group>"; };
 		8A2B856C1DC0CB9B005FC373 /* RapidAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RapidAPI.m; sourceTree = "<group>"; };
 		8A56E6791DB8B5DB00F37948 /* RapidAPISDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RapidAPISDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +38,9 @@
 		8A56E6821DB8B5DB00F37948 /* RapidAPISDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidAPISDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A56E6871DB8B5DB00F37948 /* RapidAPISDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RapidAPISDKTests.m; sourceTree = "<group>"; };
 		8A56E6891DB8B5DB00F37948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B30FEA5CE4B3A8C78E93FC9 /* Pods-RapidAPISDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAPISDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidAPISDK/Pods-RapidAPISDK.release.xcconfig"; sourceTree = "<group>"; };
+		9354621296DF754EC4E1CFE8 /* Pods-RapidAPISDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAPISDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidAPISDK/Pods-RapidAPISDK.debug.xcconfig"; sourceTree = "<group>"; };
+		96ECCE6E6EC40544A3C832DF /* Pods-RapidAPISDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAPISDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidAPISDKTests/Pods-RapidAPISDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D412541335DE6C509CDE81D /* libPods-RapidAPISDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,18 +57,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A56E6831DB8B5DB00F37948 /* RapidAPISDK.framework in Frameworks */,
+				FB746A147A202B7AA5EC062B /* libPods-RapidAPISDKTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E470AE816D1F95FE4F2498C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9354621296DF754EC4E1CFE8 /* Pods-RapidAPISDK.debug.xcconfig */,
+				8B30FEA5CE4B3A8C78E93FC9 /* Pods-RapidAPISDK.release.xcconfig */,
+				96ECCE6E6EC40544A3C832DF /* Pods-RapidAPISDKTests.debug.xcconfig */,
+				1EFCDE086AF3607CD9B80E31 /* Pods-RapidAPISDKTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D354150C1363BF3B033608F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				004B33D8732491ED7A6EC8BB /* libPods-RapidAPISDK.a */,
+				230F92A16945331C66AE1376 /* libPods-RapidAPISDKTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A56E66F1DB8B5DB00F37948 = {
 			isa = PBXGroup;
 			children = (
 				8A56E67B1DB8B5DB00F37948 /* RapidAPISDK */,
 				8A56E6861DB8B5DB00F37948 /* RapidAPISDKTests */,
 				8A56E67A1DB8B5DB00F37948 /* Products */,
+				0E470AE816D1F95FE4F2498C /* Pods */,
+				6D354150C1363BF3B033608F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,10 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A56E68D1DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidAPISDK" */;
 			buildPhases = (
+				EC0A621A3D6F33660F244E21 /* [CP] Check Pods Manifest.lock */,
 				8A56E6741DB8B5DB00F37948 /* Sources */,
 				8A56E6751DB8B5DB00F37948 /* Frameworks */,
 				8A56E6761DB8B5DB00F37948 /* Headers */,
 				8A56E6771DB8B5DB00F37948 /* Resources */,
+				4DD4B6C139FD367616D2C7BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A56E6901DB8B5DB00F37948 /* Build configuration list for PBXNativeTarget "RapidAPISDKTests" */;
 			buildPhases = (
+				8FDAE7EEECEA92D3043A6CF5 /* [CP] Check Pods Manifest.lock */,
 				8A56E67E1DB8B5DB00F37948 /* Sources */,
 				8A56E67F1DB8B5DB00F37948 /* Frameworks */,
 				8A56E6801DB8B5DB00F37948 /* Resources */,
+				5975E616E1E98A969424721B /* [CP] Embed Pods Frameworks */,
+				ECBF0CCFC19981996A1165AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +236,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DD4B6C139FD367616D2C7BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RapidAPISDK/Pods-RapidAPISDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5975E616E1E98A969424721B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RapidAPISDKTests/Pods-RapidAPISDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FDAE7EEECEA92D3043A6CF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0A621A3D6F33660F244E21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECBF0CCFC19981996A1165AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RapidAPISDKTests/Pods-RapidAPISDKTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A56E6741DB8B5DB00F37948 /* Sources */ = {
@@ -328,6 +443,7 @@
 		};
 		8A56E68E1DB8B5DB00F37948 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9354621296DF754EC4E1CFE8 /* Pods-RapidAPISDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -346,6 +462,7 @@
 		};
 		8A56E68F1DB8B5DB00F37948 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B30FEA5CE4B3A8C78E93FC9 /* Pods-RapidAPISDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -364,6 +481,7 @@
 		};
 		8A56E6911DB8B5DB00F37948 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96ECCE6E6EC40544A3C832DF /* Pods-RapidAPISDKTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7ERYUS4J4W;
 				INFOPLIST_FILE = RapidAPISDKTests/Info.plist;
@@ -375,6 +493,7 @@
 		};
 		8A56E6921DB8B5DB00F37948 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EFCDE086AF3607CD9B80E31 /* Pods-RapidAPISDKTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7ERYUS4J4W;
 				INFOPLIST_FILE = RapidAPISDKTests/Info.plist;

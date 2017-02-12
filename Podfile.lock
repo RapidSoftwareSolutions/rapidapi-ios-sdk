@@ -1,0 +1,15 @@
+PODS:
+  - PhoenixClient (1.1.0):
+    - SocketRocket (= 0.4.2)
+  - SocketRocket (0.4.2)
+
+DEPENDENCIES:
+  - PhoenixClient
+
+SPEC CHECKSUMS:
+  PhoenixClient: bb4b343dc16df49ad168c7833a06b0953f991df3
+  SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
+
+PODFILE CHECKSUM: 02fa4af18f1d6c41fe92822effa5343c4439ddc7
+
+COCOAPODS: 1.2.0

@@ -12,6 +12,8 @@
 
 @property (nonatomic, assign) NSString* baseUrl;
 @property (nonatomic, assign) NSString* auth;
+@property (nonatomic, assign) NSString* projectName;
+@property (nonatomic, assign) NSString* token;
 
 
 - (id)initWithProjectName:(NSString*)projectName andToken:(NSString*)token;
@@ -20,5 +22,12 @@
      withParameters:(NSDictionary*)parameters
             success:(void (^)(NSDictionary *responseDict))success
             failure:(void(^)(NSError* error))failure;
+-(void)listen:(NSString*)package
+        event:(NSString*)event
+    withParameters:(NSDictionary*)parameters
+    onMessage:(void (^)(NSDictionary *message))onMessage
+      onError:(void (^)(NSDictionary *reason))onError
+       onJoin:(void (^)())onJoin
+      onClose:(void (^)(NSDictionary *reason))onClose;
 
 @end
