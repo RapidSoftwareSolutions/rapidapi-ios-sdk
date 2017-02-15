@@ -39,12 +39,12 @@
 
 - (NSString*)buildGetTokenURL:(NSString*)package event:(NSString*)event
 {
-    return [NSString stringWithFormat:@"http://webhooks.imrapid.io/api/get_token?user_id=%@", [self buildUserID:package event:event]];
+    return [NSString stringWithFormat:@"https://webhooks.imrapid.io/api/get_token?user_id=%@", [self buildUserID:package event:event]];
 }
 
 - (NSString*)buildSocketURL:(NSString*)token
 {
-    return [NSString stringWithFormat:@"ws://webhooks.imrapid.io/socket/websocket?token=%@", token];
+    return [NSString stringWithFormat:@"wss://webhooks.imrapid.io/socket/websocket?token=%@", token];
 }
 
 - (NSString*)buildSocketTopic:(NSString*)package event:(NSString*)event
@@ -84,7 +84,9 @@
             onError(reason);
         }];
         [channel onEvent:@"new_msg" callback:^(NSDictionary *message, id ref) {
-            onMessage(message[@"body"]);
+            if (token == message[@"token"]) {
+                onMessage(message[@"body"]);
+            }
         }];
         [channel onClose:^(NSDictionary *reason) {
             onClose(reason);
