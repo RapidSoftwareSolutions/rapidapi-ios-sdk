@@ -39,12 +39,12 @@
 
 - (NSString*)buildGetTokenURL:(NSString*)package event:(NSString*)event
 {
-    return [NSString stringWithFormat:@"https://webhooks.imrapid.io/api/get_token?user_id=%@", [self buildUserID:package event:event]];
+    return [NSString stringWithFormat:@"https://webhooks.rapidapi.xyz/api/get_token?user_id=%@", [self buildUserID:package event:event]];
 }
 
 - (NSString*)buildSocketURL:(NSString*)token
 {
-    return [NSString stringWithFormat:@"wss://webhooks.imrapid.io/socket/websocket?token=%@", token];
+    return [NSString stringWithFormat:@"wss://webhooks.rapidapi.xyz/socket/websocket?token=%@", token];
 }
 
 - (NSString*)buildSocketTopic:(NSString*)package event:(NSString*)event
