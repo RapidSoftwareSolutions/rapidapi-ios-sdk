@@ -59,11 +59,11 @@
 
 - (void)listen:(NSString*)package
          event:(NSString*)event
-    withParameters:(NSDictionary*)parameters
+withParameters:(NSDictionary*)parameters
      onMessage:(void (^)(NSDictionary *message))onMessage
-     onError:(void (^)(NSDictionary *reason))onError
+       onError:(void (^)(NSDictionary *reason))onError
         onJoin:(void (^)())onJoin
-        onClose:(void (^)(NSDictionary *reason))onClose
+       onClose:(void (^)(NSDictionary *reason))onClose
 {
     NSURL *token_url = [NSURL URLWithString:[self buildGetTokenURL:package event:event]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:token_url];
@@ -84,7 +84,9 @@
             onError(reason);
         }];
         [channel onEvent:@"new_msg" callback:^(NSDictionary *message, id ref) {
-            if (token == message[@"token"]) {
+            if (!message[@"token"]) {
+                onError(message[@"body"]);
+            } else if ([token isEqualToString:message[@"token"]]) {
                 onMessage(message[@"body"]);
             }
         }];
@@ -137,7 +139,7 @@
         }
         
     }
-
+    
     
     [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
     [request setHTTPBody:body];
@@ -149,7 +151,7 @@
     
     if (!error) {
         NSURLSessionDataTask *uploadTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-
+            
             NSDictionary * json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             success(json);
             
