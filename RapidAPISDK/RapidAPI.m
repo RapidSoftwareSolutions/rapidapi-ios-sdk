@@ -47,9 +47,9 @@
     return [NSString stringWithFormat:@"wss://webhooks.rapidapi.com/socket/websocket?token=%@", token];
 }
 
-- (NSString*)buildSocketTopic:(NSString*)package event:(NSString*)event
+- (NSString*)buildSocketTopic:(NSString*)token
 {
-    return [NSString stringWithFormat:@"users_socket:%@", [self buildUserID:package event:event]];
+    return [NSString stringWithFormat:@"users_socket:%@", token];
 }
 
 - (NSString*)buildUserID:(NSString*)package event:(NSString*)event
@@ -73,7 +73,7 @@ withParameters:(NSDictionary*)parameters
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
         NSString *token = json[@"token"];
         PhxSocket *socket = [[PhxSocket alloc] initWithURL:[NSURL URLWithString:[self buildSocketURL:token]] heartbeatInterval:20];
-        NSString *topic = [self buildSocketTopic:package event:event];
+        NSString *topic = [self buildSocketTopic:token];
         [socket connect];
         PhxChannel *channel = [[PhxChannel alloc] initWithSocket:socket topic:topic params:parameters];
         id join = [channel join];
@@ -86,7 +86,7 @@ withParameters:(NSDictionary*)parameters
         [channel onEvent:@"new_msg" callback:^(NSDictionary *message, id ref) {
             if (!message[@"token"]) {
                 onError(message[@"body"]);
-            } else if ([token isEqualToString:message[@"token"]]) {
+            } else {
                 onMessage(message[@"body"]);
             }
         }];
